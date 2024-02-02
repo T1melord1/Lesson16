@@ -1,19 +1,15 @@
 public class Main {
+    public static final String VALID_REGEX = " ";
     public static void main(String[] args) {
-        String info = "756243523";
+        String info = "Молоко: 256, масло: 321; печенье: 54, Шоколад: 32";
 
-        System.out.println(info.replaceAll("(\\d{3})(.+)","$2-$1"));
-        // \\s - ПРОБЕЛЫ
-        // \\d - ЦИФРЫ
-        // \\w - БУКВЫ(АНГЛЙИСКИЕ) И ЦИФРЫ
-        // \\S - ВСЁ КРОМЕ ПРОБЕЛЬНЫХ СИМВОЛОВ
-        // \\D - ВСЁ КРОМЕ ЦИФР
-        // \\W - ВСЁ КРОМЕ АНГЛИЙСИКХ БУКВ И ЦИФР
-        // [А-я]
-        // * - КВАНТОР
-        // + - КВАНТОР  \\d+ меняет все цифры заменяя значением из replacement
-        // ? - НОЛЬ ИЛИ ОДНО ВХОЖДЕНИЕ
-        // {3} - КАКОЕ-ТО КОЛИЧЕСТВО БУКВ ЗАМЕНА
-        // .+ - ТОЧКА ЛЮБОЙ СИМВОЛ ЛЮБОЙ ЗНАК, .+ ОЗНАЧАЕТ 1 ИЛИ БОЛЕЕ
+       info = info.replaceAll("\\D+", " ").trim();
+        String[] split = info.split("\\s");
+        int sum = 0;
+        for(String e: split){
+
+            sum += Integer.parseInt(e);
+        }
+        System.out.println(sum);
     }
 }
