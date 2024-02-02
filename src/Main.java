@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         String info = "Молоко: 256, масло: 321, печенье: 54, Шоколад: 32";
 
-        System.out.println(info.replaceAll("\\d+","*"));
+        System.out.println(info.replaceAll("[А-я]{3,}","*"));
         // \\s - ПРОБЕЛЫ
         // \\d - ЦИФРЫ
         // \\w - БУКВЫ(АНГЛЙИСКИЕ) И ЦИФРЫ
@@ -12,6 +12,8 @@ public class Main {
         // [А-я]
         // * - КВАНТОР
         // + - КВАНТОР  \\d+ меняет все цифры заменяя значением из replacement
+        // ? - НОЛЬ ИЛИ ОДНО ВХОЖДЕНИЕ
+        // {3} - КАКОЕ-ТО КОЛИЧЕСТВО БУКВ ЗАМЕНА
 
     }
 }
