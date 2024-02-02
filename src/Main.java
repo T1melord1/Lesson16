@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        String info = "7562435";
+        String info = "756243523";
 
-        System.out.println(info.replaceAll("(\\d{3})(\\d{4})","$1-$2"));
+        System.out.println(info.replaceAll("(\\d{3})(.+)","$2-$1"));
         // \\s - ПРОБЕЛЫ
         // \\d - ЦИФРЫ
         // \\w - БУКВЫ(АНГЛЙИСКИЕ) И ЦИФРЫ
@@ -14,6 +14,6 @@ public class Main {
         // + - КВАНТОР  \\d+ меняет все цифры заменяя значением из replacement
         // ? - НОЛЬ ИЛИ ОДНО ВХОЖДЕНИЕ
         // {3} - КАКОЕ-ТО КОЛИЧЕСТВО БУКВ ЗАМЕНА
-
+        // .+ - ТОЧКА ЛЮБОЙ СИМВОЛ ЛЮБОЙ ЗНАК, .+ ОЗНАЧАЕТ 1 ИЛИ БОЛЕЕ
     }
 }
