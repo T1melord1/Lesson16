@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        String info = "Молоко: 256, масло: 321, печенье: 54, Шоколад: 32";
+        String info = "7562435";
 
-        System.out.println(info.replaceAll("[А-я]{3,}","*"));
+        System.out.println(info.replaceAll("(\\d{3})(\\d{4})","$1-$2"));
         // \\s - ПРОБЕЛЫ
         // \\d - ЦИФРЫ
         // \\w - БУКВЫ(АНГЛЙИСКИЕ) И ЦИФРЫ
